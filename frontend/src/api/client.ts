@@ -73,6 +73,8 @@ export const api = {
     ).toString();
     return request<PagedResult<Employee>>(`/employees?${query}`);
   },
+  createEmployee: (data: Record<string, unknown>) =>
+    request<Employee>('/employees', { method: 'POST', body: JSON.stringify(data) }),
   getEmployee: (id: number) => request<Employee>(`/employees/${id}`),
   updateEmployee: (id: number, data: Partial<Employee>) =>
     request<Employee>(`/employees/${id}`, { method: 'PUT', body: JSON.stringify(data) }),

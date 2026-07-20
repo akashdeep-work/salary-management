@@ -40,6 +40,9 @@ export function EmployeeList() {
           <option value="">All Countries</option>
           {COUNTRIES.map((c) => <option key={c} value={c}>{c}</option>)}
         </select>
+        <Link to="/employees/new" className="ml-auto rounded-md bg-slate-900 px-4 py-2 text-sm font-medium text-white">
+          + Add Employee
+        </Link>
       </div>
 
       <div className="overflow-hidden rounded-lg border bg-white shadow-sm">

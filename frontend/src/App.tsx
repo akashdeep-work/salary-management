@@ -3,6 +3,7 @@ import { Layout } from './components/Layout';
 import { Dashboard } from './pages/Dashboard';
 import { EmployeeList } from './pages/EmployeeList';
 import { EmployeeDetail } from './pages/EmployeeDetail';
+import { AddEmployee } from './pages/AddEmployee';
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
       <Route element={<Layout />}>
         <Route path="/" element={<Dashboard />} />
         <Route path="/employees" element={<EmployeeList />} />
+        <Route path="/employees/new" element={<AddEmployee />} />
         <Route path="/employees/:id" element={<EmployeeDetail />} />
       </Route>
     </Routes>
