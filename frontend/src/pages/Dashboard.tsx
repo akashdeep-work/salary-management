@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts';
 import { api, type GroupStat, type Summary } from '../api/client';
+import { StatCard } from '../components/StatCard';
 
 const usd = (n: number) => `$${Math.round(n).toLocaleString()}`;
 
